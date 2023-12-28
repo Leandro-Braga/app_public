@@ -49,6 +49,7 @@ bar.markdown(f"""<h1 style=
 ## --- Versão 5 -----
 
 # Função para carregar os dados
+@st.cache_data
 def load_data(filepath):
     return pd.read_excel(filepath)
 
@@ -272,6 +273,22 @@ with aba3:
             st.markdown(pdf_display, unsafe_allow_html=True)
 
 
+        # https://deta.space/collections/e0DL3e6zSqw
+        link1 = """<iframe src="https://publuu.com/flip-book/348588/798957/page/1?embed" width="100%" height="1100" scrolling="no" frameborder="0" allowfullscreen="" allow="clipboard-write" class="publuuflip"></iframe>"""
+        
+        def displayPDF2(link):
+            pdf_display = link
+            st.markdown(pdf_display, unsafe_allow_html=True)
+
+        # def displayPDF2():
+        #     # st.markdown("""
+        #     #     <embed src="https://thomasmorestudies.org/wp-content/uploads/2020/09/Richard.pdf" width="800" height="800">
+        #     #     """, unsafe_allow_html=True)
+        #     st.markdown("""
+        #         <embed src="https://publuu.com/flip-book/348588/798957" width="800" height="800">
+        #         """, unsafe_allow_html=True)
+
+
 
         # def displayPDF(file_path):
         #     # Check if the file exists
@@ -297,9 +314,11 @@ with aba3:
         pdf_6 = './res/12-2023/Ata_146ª Reunião ordinária do CT - 14.12.2023 - em análise pelos membros.pdf'
         pdf_7 = './res/12-2023/Minuta da Ata da 172ª Reunião do CMA 13.12.2023 - orçamento.pdf'
 
-
+        # displayPDF2()
+        
         with st.expander('Reunião 52ª Comitê de Operação e Manutenção'):
-            displayPDF(pdf_1)
+            # displayPDF(pdf_1)
+            displayPDF2(link1)
 
         st.divider()
         
