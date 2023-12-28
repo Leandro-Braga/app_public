@@ -207,10 +207,6 @@ with aba3:
 
         stilo_abre = "<h1 style=color:#61677A;font-size:20px;>"
         stilo_fecha = "</h1>"
-
-        # st.markdown(f"""{stilo_abre}
-        #         📊 Análise de Comunicações: Demonstrativo de Resultado (DRE) 2023-2026.
-        #         {stilo_fecha}""", unsafe_allow_html=True)
         
         st.markdown(""" 
                     📝 **Acesso às Atas das Reuniões com os Comitês**
@@ -253,21 +249,28 @@ with aba3:
         #     # Displaying File
         #     st.markdown(pdf_display, unsafe_allow_html=True)
 
-        def displayPDF(file):
-            # Opening file from file path
-            with open(file, "rb") as f:
+        # def displayPDF(file):
+        #     # Opening file from file path
+        #     with open(file, "rb") as f:
+        #         base64_pdf = base64.b64encode(f.read()).decode('utf-8')
+
+        #     # Embedding PDF in HTML
+        #     pdf_display =  f"""<embed
+        #     class="pdfobject"
+        #     type="application/pdf"
+        #     title="Embedded PDF"
+        #     src="data:application/pdf;base64,{base64_pdf}"
+        #     style="overflow: auto; width: 100%; height: 300%;">"""
+
+        #     # Displaying File
+        #     st.markdown(pdf_display, unsafe_allow_html=True)
+
+        def displayPDF(file_path):
+            with open(file_path, "rb") as f:
                 base64_pdf = base64.b64encode(f.read()).decode('utf-8')
-
-            # Embedding PDF in HTML
-            pdf_display =  f"""<embed
-            class="pdfobject"
-            type="application/pdf"
-            title="Embedded PDF"
-            src="data:application/pdf;base64,{base64_pdf}"
-            style="overflow: auto; width: 100%; height: 300%;">"""
-
-            # Displaying File
+            pdf_display = F'<embed src="data:application/pdf;base64,{base64_pdf}" width="1100" height="1000" type="application/pdf">'
             st.markdown(pdf_display, unsafe_allow_html=True)
+
 
 
         # def displayPDF(file_path):
