@@ -227,6 +227,8 @@ with aba3:
                     Acreditamos que o acesso facilitado a essas informações fortalece a confiança e a transparência entre a empresa e todos os seus stakeholders.""")
         st.divider()
 
+        # Testes PDF 
+        
         # def displayPDF(file):
         #     # Opening file from file path
         #     with open(file, "rb") as f:
@@ -266,19 +268,11 @@ with aba3:
         #     # Displaying File
         #     st.markdown(pdf_display, unsafe_allow_html=True)
 
-        def displayPDF(file_path):
-            with open(file_path, "rb") as f:
-                base64_pdf = base64.b64encode(f.read()).decode('utf-8')
-            pdf_display = F'<embed src="data:application/pdf;base64,{base64_pdf}" width="1100" height="1000" type="application/pdf">'
-            st.markdown(pdf_display, unsafe_allow_html=True)
-
-
-        # https://deta.space/collections/e0DL3e6zSqw
-        link1 = """<iframe src="https://publuu.com/flip-book/348588/798957/page/1?embed" width="100%" height="1100" scrolling="no" frameborder="0" allowfullscreen="" allow="clipboard-write" class="publuuflip"></iframe>"""
-        
-        def displayPDF2(link):
-            pdf_display = link
-            st.markdown(pdf_display, unsafe_allow_html=True)
+        # def displayPDF(file_path):
+        #     with open(file_path, "rb") as f:
+        #         base64_pdf = base64.b64encode(f.read()).decode('utf-8')
+        #     pdf_display = F'<embed src="data:application/pdf;base64,{base64_pdf}" width="1100" height="1000" type="application/pdf">'
+        #     st.markdown(pdf_display, unsafe_allow_html=True)
 
         # def displayPDF2():
         #     # st.markdown("""
@@ -287,7 +281,6 @@ with aba3:
         #     st.markdown("""
         #         <embed src="https://publuu.com/flip-book/348588/798957" width="800" height="800">
         #         """, unsafe_allow_html=True)
-
 
 
         # def displayPDF(file_path):
@@ -306,15 +299,40 @@ with aba3:
         #         st.error("O arquivo não foi encontrado.")
 
         
-        pdf_1 = './res/12-2023/52ª REUNIÃO ORDINÁRIA DO COMITÊ DE OPERAÇÃO E MANUTENÇÃO.pdf'
-        pdf_2 = './res/12-2023/Ata 164ª Reunião Ordinária do CRC - em análise pelos membros do CRC.pdf'
-        pdf_3 = './res/12-2023/Ata da 102ª Reunião do Comitê de Gestão - 14.12.23.pdf'
-        pdf_4 = './res/12-2023/ATA DA 114ª REUNIÃO DO COMITÊ DE AUDITORIA - somente orçamento.pdf'
-        pdf_5 = './res/12-2023/ATA DA 192ª REUNIÃO DO COMITÊ FINANCEIRO - orçamento.pdf'
-        pdf_6 = './res/12-2023/Ata_146ª Reunião ordinária do CT - 14.12.2023 - em análise pelos membros.pdf'
-        pdf_7 = './res/12-2023/Minuta da Ata da 172ª Reunião do CMA 13.12.2023 - orçamento.pdf'
+        # pdf_1 = './res/12-2023/52ª REUNIÃO ORDINÁRIA DO COMITÊ DE OPERAÇÃO E MANUTENÇÃO.pdf'
+        # pdf_2 = './res/12-2023/Ata 164ª Reunião Ordinária do CRC - em análise pelos membros do CRC.pdf'
+        # pdf_3 = './res/12-2023/Ata da 102ª Reunião do Comitê de Gestão - 14.12.23.pdf'
+        # pdf_4 = './res/12-2023/ATA DA 114ª REUNIÃO DO COMITÊ DE AUDITORIA - somente orçamento.pdf'
+        # pdf_5 = './res/12-2023/ATA DA 192ª REUNIÃO DO COMITÊ FINANCEIRO - orçamento.pdf'
+        # pdf_6 = './res/12-2023/Ata_146ª Reunião ordinária do CT - 14.12.2023 - em análise pelos membros.pdf'
+        # pdf_7 = './res/12-2023/Minuta da Ata da 172ª Reunião do CMA 13.12.2023 - orçamento.pdf'
 
-        # displayPDF2()
+
+        # https://discuss.streamlit.io/t/problems-displaying-pdf-in-streamlit-cloud/35555
+
+        def displayPDF2(link):
+            pdf_display = link
+            st.markdown(pdf_display, unsafe_allow_html=True)
+
+
+        # link calameo
+        # link1 = """<div style="text-align:center;"><iframe src="//v.calameo.com/?bkcode=005631827143ab67d94d2&mode=mini" width="1620" height="680" frameborder="1" scrolling="yes" allowtransparency allowfullscreen style="margin:0 auto;"></iframe></div>"""
+                 
+        link1 = """<iframe src="https://publuu.com/flip-book/348588/798957/page/1?embed" width="100%" height="1620" scrolling="no" frameborder="0" allowfullscreen="" allow="clipboard-write" class="publuuflip"></iframe>"""
+
+        link2 = """<iframe src="https://publuu.com/flip-book/348588/798987/page/1?embed" width="100%" height="1620" scrolling="no" frameborder="0" allowfullscreen="" allow="clipboard-write" class="publuuflip"></iframe>"""
+
+        link3 = """<iframe src="https://publuu.com/flip-book/348588/799002/page/1?embed" width="100%" height="1620" scrolling="no" frameborder="0" allowfullscreen="" allow="clipboard-write" class="publuuflip"></iframe>"""
+        
+        link4 = """<iframe src="https://publuu.com/flip-book/348588/799004/page/1?embed" width="100%" height="1620" scrolling="no" frameborder="0" allowfullscreen="" allow="clipboard-write" class="publuuflip"></iframe>"""
+        
+        link5 = """<iframe src="https://publuu.com/flip-book/348588/799005/page/1?embed" width="100%" height="1620" scrolling="no" frameborder="0" allowfullscreen="" allow="clipboard-write" class="publuuflip"></iframe>"""
+        
+        link6 = """<iframe src="https://publuu.com/flip-book/348588/799006/page/1?embed" width="100%" height="1620" scrolling="no" frameborder="0" allowfullscreen="" allow="clipboard-write" class="publuuflip"></iframe>"""
+        
+        link7 = """<iframe src="https://publuu.com/flip-book/348588/799007/page/1?embed" width="100%" height="1620" scrolling="no" frameborder="0" allowfullscreen="" allow="clipboard-write" class="publuuflip"></iframe>"""
+        
+
         
         with st.expander('Reunião 52ª Comitê de Operação e Manutenção'):
             # displayPDF(pdf_1)
@@ -323,30 +341,36 @@ with aba3:
         st.divider()
         
         with st.expander('Ata 164ª Reunião Ordinária do CRC'):
-            displayPDF(pdf_2)
+            # displayPDF(pdf_2)
+            displayPDF2(link2)
 
         st.divider()
 
         with st.expander('Ata da 102ª Reunião do Comitê de Gestão'):
-            displayPDF(pdf_3)
+            # displayPDF(pdf_3)
+            displayPDF2(link3)
 
         st.divider()
 
         with st.expander('Ata da 114ª Reunião do Comitê de Auditoria'):
-            displayPDF(pdf_4)
+            # displayPDF(pdf_4)
+            displayPDF2(link4)
 
         st.divider()
 
         with st.expander('Ata da 192ª Reunião do Comitê Financeiro'):
-            displayPDF(pdf_5)
+            # displayPDF(pdf_5)
+            displayPDF2(link5)
 
         st.divider()
 
         with st.expander('Ata 146ª Reunião Ordinária do CT'):
-            displayPDF(pdf_6)
+            # displayPDF(pdf_6)
+            displayPDF2(link6)
 
         st.divider()
 
         with st.expander('Minuta da Ata da 172ª Reunião do CMA'):
-            displayPDF(pdf_7)
+            # displayPDF(pdf_7)
+            displayPDF2(link7)
 
