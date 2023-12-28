@@ -138,13 +138,12 @@ with aba2:
     stilo_abre = "<h1 style=color:#61677A;font-size:20px;>"
     stilo_fecha = "</h1>"
 
-    spam_abre = "<span style='color:#0766AD'>"
+    spam_abre = f"<span style='color:#0766AD'>"
+    spam_abre2 = f"<span style='color:#31304D'>"
     spam_fecha = "</span>"
 
-    # st.markdown(f"""{stilo_abre}
-    #         O <span style='color:#6499E9'>Beta desalavancado</span> é obtido por meio da média ponderada do beta das empresas estadunidenses membros do Edison Electric Institute – EEI com, ao menos, <span style='color:#6499E9'>50%</span> dos ativos em <span style='color:#6499E9'>transmissão</span> ou <span style='color:#6499E9'>distribuição</span>. 
-    #         {stilo_fecha}""",
-    #     unsafe_allow_html=True)
+
+
     
     st.markdown(f"""{stilo_abre}
                 📊 Análise de Comunicações: Demonstrativo de Resultado (DRE) 2023-2026.
@@ -154,10 +153,8 @@ with aba2:
                     {spam_abre}Período de Análise:{spam_fecha} 13 de Outubro de 2023 a 26 de Dezembro de 2023.
                     {stilo_fecha}""", unsafe_allow_html=True)
     
-    st.markdown(f"""{stilo_abre}
-                    {spam_abre}
-                    E-mails Recebidos:
-                    {spam_fecha}
+    st.markdown(f"""{stilo_abre} 
+                    {spam_abre2}E-mails Recebidos:{spam_fecha}
                     {stilo_fecha}
                     """, unsafe_allow_html=True)
     
@@ -183,6 +180,7 @@ with aba2:
     col1, col2 = st.columns(2)
 
     with col1:
+        st.subheader('Total de perguntas')
         st.markdown(f"""<h1 style=
                         "color:#2D9596;
                         font-size:30px;
@@ -198,6 +196,7 @@ with aba2:
                         unsafe_allow_html=True)
             
     with col2:
+        st.subheader('Total por questionador')
         for index in questionador_totais.index:
             print(f'{index} {questionador_totais[index]}')
             st.markdown(f"""<h1 style=
