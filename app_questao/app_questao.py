@@ -184,7 +184,7 @@ with aba2:
                         unsafe_allow_html=True)
         
         for index in quantidades_totais.index:
-            print(f'{index} {quantidades_totais[index]}')
+            # print(f'{index} {quantidades_totais[index]}')
             st.markdown(f"""<h1 style=
                         "color:#265073;
                         font-size:30px;
@@ -194,7 +194,7 @@ with aba2:
     with col2:
         st.subheader('Total por questionador')
         for index in questionador_totais.index:
-            print(f'{index} {questionador_totais[index]}')
+            # print(f'{index} {questionador_totais[index]}')
             st.markdown(f"""<h1 style=
                         "color:#265073;
                         font-size:30px;
