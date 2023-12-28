@@ -3,6 +3,7 @@ import warnings
 import pandas as pd
 import streamlit as st
 from PIL import Image
+from streamlit_extras.stylable_container import stylable_container
 
 warnings.filterwarnings('ignore')
 
@@ -111,7 +112,7 @@ def filter_data_by_class_questionador(dataframe,
     ]
 
 
-aba1, aba2 = st.tabs(["Perguntas e Respostas", "Quantidade de Questionamentos"])
+aba1, aba2, aba3 = st.tabs(["Perguntas e Respostas", "Quantidade de Questionamentos", "Atas Reuniões Comitês"])
 
 with aba1:
     # Iterar sobre as classes selecionadas e exibir as perguntas e respostas
@@ -143,6 +144,7 @@ with aba2:
     spam_fecha = "</span>"
 
 
+    # https://colorhunt.co/
 
     
     st.markdown(f"""{stilo_abre}
@@ -205,5 +207,40 @@ with aba2:
                         ">{index}: {questionador_totais[index]}</h1>""", 
                         unsafe_allow_html=True)
 
+    with aba3:
+        st.link_button('Reunião 52ª Comitê de Operação e Manutenção', 'https://norteenergiasa.sharepoint.com/:b:/r/sites/orcamento49/Documentos%20Compartilhados/General/6%20-%20Diversos/Base_Email_Perguntas/atas/12-2023/52%C2%AA%20REUNI%C3%83O%20ORDIN%C3%81RIA%20DO%20COMIT%C3%8A%20DE%20OPERA%C3%87%C3%83O%20E%20MANUTEN%C3%87%C3%83O.pdf?csf=1&web=1&e=S8S7eE')
 
-    # https://colorhunt.co/
+        st.link_button('Ata 164ª Reunião Ordinária do CRC', 'https://norteenergiasa.sharepoint.com/:b:/r/sites/orcamento49/Documentos Compartilhados/General/6 - Diversos/Base_Email_Perguntas/atas/12-2023/Ata 164%C2%AA Reuni%C3%A3o Ordin%C3%A1ria do CRC - em an%C3%A1lise pelos membros do CRC.pdf?csf=1&web=1&e=sS3v1R')
+
+
+        # customização de botões e containers
+
+        def example_stylos():
+
+            with stylable_container(
+                key="green_button",
+                css_styles="""
+                    button {
+                        background-color: green;
+                        color: white;
+                        border-radius: 20px;
+                    }
+                    """,
+            ):
+                st.button("Green button")
+
+            st.button("Normal button")
+
+            with stylable_container(
+                key="container_with_border",
+                css_styles="""
+                    {
+                        border: 1px solid rgba(49, 51, 63, 0.2);
+                        border-radius: 0.5rem;
+                        padding: calc(1em - 1px)
+                    }
+                    """,
+            ):
+                st.markdown("This is a container with a border.")
+
+        example_stylos()
