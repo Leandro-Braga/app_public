@@ -1,12 +1,12 @@
 import base64
-import warnings
+# import warnings
 
 import pandas as pd
 import streamlit as st
 from PIL import Image
 from streamlit_extras.stylable_container import stylable_container
 
-warnings.filterwarnings('ignore')
+# warnings.filterwarnings('ignore')
 
 
 image_logo = Image.open('./img/logo_nesa_branco.png')
