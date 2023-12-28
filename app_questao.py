@@ -230,16 +230,16 @@ with aba3:
                     Acreditamos que o acesso facilitado a essas informações fortalece a confiança e a transparência entre a empresa e todos os seus stakeholders.""")
         st.divider()
 
-        def displayPDF(file):
-            # Opening file from file path
-            with open(file, "rb") as f:
-                base64_pdf = base64.b64encode(f.read()).decode('utf-8')
+        # def displayPDF(file):
+        #     # Opening file from file path
+        #     with open(file, "rb") as f:
+        #         base64_pdf = base64.b64encode(f.read()).decode('utf-8')
 
-            # Embedding PDF in HTML
-            pdf_display = f'<embed src="data:application/pdf;base64,{base64_pdf}" width="1100" height="1000" type="application/pdf">'
+        #     # Embedding PDF in HTML
+        #     pdf_display = f'<embed src="data:application/pdf;base64,{base64_pdf}" width="1100" height="1000" type="application/pdf">'
 
-            # Displaying File
-            st.markdown(pdf_display, unsafe_allow_html=True)
+        #     # Displaying File
+        #     st.markdown(pdf_display, unsafe_allow_html=True)
 
 
         # def displayPDF(file):
@@ -270,20 +270,20 @@ with aba3:
         #     st.markdown(pdf_display, unsafe_allow_html=True)
 
 
-        # def displayPDF(file_path):
-        #     # Check if the file exists
-        #     if file_path:
-        #         # Opening file from file path
-        #         with open(file_path, "rb") as f:
-        #             base64_pdf = base64.b64encode(f.read()).decode('utf-8')
+        def displayPDF(file_path):
+            # Check if the file exists
+            if file_path:
+                # Opening file from file path
+                with open(file_path, "rb") as f:
+                    base64_pdf = base64.b64encode(f.read()).decode('utf-8')
 
-        #         # Embedding PDF in HTML
-        #         pdf_display = F'<iframe src="data:application/pdf;base64,{base64_pdf}" width="1100" height="1000" type="application/pdf"></iframe>'
+                # Embedding PDF in HTML
+                pdf_display = F'<iframe src="data:application/pdf;base64,{base64_pdf}" width="1100" height="1000" type="application/pdf"></iframe>'
 
-        #         # Displaying File
-        #         st.markdown(pdf_display, unsafe_allow_html=True)
-        #     else:
-        #         st.error("O arquivo não foi encontrado.")
+                # Displaying File
+                st.markdown(pdf_display, unsafe_allow_html=True)
+            else:
+                st.error("O arquivo não foi encontrado.")
 
         
         pdf_1 = './res/12-2023/52ª REUNIÃO ORDINÁRIA DO COMITÊ DE OPERAÇÃO E MANUTENÇÃO.pdf'
