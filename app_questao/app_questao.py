@@ -1,5 +1,4 @@
 import base64
-import urllib
 import warnings
 
 import pandas as pd
@@ -86,14 +85,7 @@ selected_questionadores = st.sidebar.multiselect('**Escolha os Questionadores:**
                                                  default=unique_questionadores)
 
 
-
 # https://colorhunt.co/
-# bar.markdown(f"""<h1 style=
-#                 "color:#FAF8F1;
-#                 font-size:30px;
-#                 ">{menu_bar}</h1>""", 
-#                 unsafe_allow_html=True)
-
 st.markdown("""
     <style>
         [data-testid=stSidebar] {background-color: #0099A8;}
@@ -186,7 +178,7 @@ with aba2:
     with col1:
         st.subheader('Total de perguntas')
         st.markdown(f"""<h1 style=
-                        "color:#2D9596;
+                        "color:#265073;
                         font-size:30px;
                         ">Total de questões: {total_questionamentos}</h1>""", 
                         unsafe_allow_html=True)
