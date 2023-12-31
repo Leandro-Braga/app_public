@@ -45,6 +45,38 @@ bar.markdown(f"""<h1 style=
                 ">{filtro}</h1>""", 
                 unsafe_allow_html=True)
 
+# Configuração do tamanho dos textos principais
+def texto_diversos():
+        st.markdown(
+        """
+        <style>
+
+        .st-emotion-cache-q4lvki p {
+            word-break: break-word;
+            margin-bottom: 0px;
+            font-size: 18px;
+        }
+        .css-176rrwg {
+            min-height: 1.5rem;
+        }
+
+        .css-q4lvki p {
+            font-size: 18px;
+        }
+
+        .css-atw1qn p {
+            font-size: 18px;
+        }
+
+        .st-af {
+            font-size: 1.1rem;
+        }
+
+        </style>
+        """,
+        unsafe_allow_html=True)
+
+
 
 ## --- Versão 5 -----
 
@@ -112,6 +144,10 @@ def filter_data_by_class_questionador(dataframe,
 aba1, aba2, aba3 = st.tabs(["Perguntas e Respostas", "Quantidade de Questionamentos", "Atas Reuniões Comitês"])
 
 with aba1:
+
+    # Aplica as modificações dos textos
+    texto_diversos()
+    
     # Iterar sobre as classes selecionadas e exibir as perguntas e respostas
     for classe in selected_classes:
 
@@ -133,7 +169,7 @@ with aba1:
 
 with aba2:
 
-    stilo_abre = "<h1 style=color:#61677A;font-size:20px;>"
+    stilo_abre = "<h1 style=color:#61677A;font-size:18px;>"
     stilo_fecha = "</h1>"
 
     spam_abre = f"<span style='color:#0766AD'>"
@@ -206,8 +242,8 @@ with aba2:
 
 with aba3:
 
-        stilo_abre = "<h1 style=color:#61677A;font-size:20px;>"
-        stilo_fecha = "</h1>"
+        # stilo_abre = "<h1 style=color:#61677A;font-size:20px;>"
+        # stilo_fecha = "</h1>"
         
         st.markdown(""" 
                     📝 **Acesso às Atas das Reuniões com os Comitês**
@@ -225,9 +261,9 @@ with aba3:
                     Esta seção é especialmente útil para acionistas, membros dos comitês, funcionários e qualquer parte interessada em acompanhar as atividades e decisões da empresa.
 
                     Acreditamos que o acesso facilitado a essas informações fortalece a confiança e a transparência entre a empresa e todos os seus stakeholders.""")
+        
         st.divider()
 
-        # Testes PDF 
         
         # def displayPDF(file):
         #     # Opening file from file path
@@ -252,53 +288,7 @@ with aba3:
         #     # Displaying File
         #     st.markdown(pdf_display, unsafe_allow_html=True)
 
-        # def displayPDF(file):
-        #     # Opening file from file path
-        #     with open(file, "rb") as f:
-        #         base64_pdf = base64.b64encode(f.read()).decode('utf-8')
 
-        #     # Embedding PDF in HTML
-        #     pdf_display =  f"""<embed
-        #     class="pdfobject"
-        #     type="application/pdf"
-        #     title="Embedded PDF"
-        #     src="data:application/pdf;base64,{base64_pdf}"
-        #     style="overflow: auto; width: 100%; height: 300%;">"""
-
-        #     # Displaying File
-        #     st.markdown(pdf_display, unsafe_allow_html=True)
-
-        # def displayPDF(file_path):
-        #     with open(file_path, "rb") as f:
-        #         base64_pdf = base64.b64encode(f.read()).decode('utf-8')
-        #     pdf_display = F'<embed src="data:application/pdf;base64,{base64_pdf}" width="1100" height="1000" type="application/pdf">'
-        #     st.markdown(pdf_display, unsafe_allow_html=True)
-
-        # def displayPDF2():
-        #     # st.markdown("""
-        #     #     <embed src="https://thomasmorestudies.org/wp-content/uploads/2020/09/Richard.pdf" width="800" height="800">
-        #     #     """, unsafe_allow_html=True)
-        #     st.markdown("""
-        #         <embed src="https://publuu.com/flip-book/348588/798957" width="800" height="800">
-        #         """, unsafe_allow_html=True)
-
-
-        # def displayPDF(file_path):
-        #     # Check if the file exists
-        #     if file_path:
-        #         # Opening file from file path
-        #         with open(file_path, "rb") as f:
-        #             base64_pdf = base64.b64encode(f.read()).decode('utf-8')
-
-        #         # Embedding PDF in HTML
-        #         pdf_display = F'<iframe src="data:application/pdf;base64,{base64_pdf}" width="1100" height="1000" type="application/pdf"></iframe>'
-
-        #         # Displaying File
-        #         st.markdown(pdf_display, unsafe_allow_html=True)
-        #     else:
-        #         st.error("O arquivo não foi encontrado.")
-
-        
         # pdf_1 = './res/12-2023/52ª REUNIÃO ORDINÁRIA DO COMITÊ DE OPERAÇÃO E MANUTENÇÃO.pdf'
         # pdf_2 = './res/12-2023/Ata 164ª Reunião Ordinária do CRC - em análise pelos membros do CRC.pdf'
         # pdf_3 = './res/12-2023/Ata da 102ª Reunião do Comitê de Gestão - 14.12.23.pdf'

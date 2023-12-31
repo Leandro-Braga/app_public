@@ -44,6 +44,37 @@ bar.markdown(f"""<h1 style=
                 unsafe_allow_html=True)
 
 
+def texto_diversos():
+        st.markdown(
+        """
+        <style>
+
+        .st-emotion-cache-q4lvki p {
+            word-break: break-word;
+            margin-bottom: 0px;
+            font-size: 18px;
+        }
+        .css-176rrwg {
+            min-height: 1.5rem;
+        }
+
+        .css-q4lvki p {
+            font-size: 18px;
+        }
+
+        .css-atw1qn p {
+            font-size: 18px;
+        }
+
+        .st-af {
+            font-size: 1.1rem;
+        }
+
+        </style>
+        """,
+        unsafe_allow_html=True)
+
+
 ## --- Versão 5 -----
 
 # Função para carregar os dados
@@ -110,6 +141,9 @@ aba1, aba2, aba3 = st.tabs(["Perguntas e Respostas", "Quantidade de Questionamen
 
 with aba1:
     # Iterar sobre as classes selecionadas e exibir as perguntas e respostas
+
+    texto_diversos()
+    
     for classe in selected_classes:
 
         st.subheader(f':grey[{classe}]')
@@ -130,7 +164,7 @@ with aba1:
 
 with aba2:
 
-    stilo_abre = "<h1 style=color:#61677A;font-size:20px;>"
+    stilo_abre = "<h1 style=color:#61677A;font-size:18px;>"
     stilo_fecha = "</h1>"
 
     spam_abre = f"<span style='color:#0766AD'>"
