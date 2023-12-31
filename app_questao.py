@@ -110,7 +110,7 @@ st.title(':grey[Perguntas e Respostas]')
 st.subheader(":grey[Demonstrativo de Resultado – DRE 24-26]")
 
 # Filtros na barra lateral para selecionar classes e questionadores
-selected_classes = st.sidebar.multiselect('**Escolha os Demonstrativos de Resultado:**', 
+selected_classes = st.sidebar.multiselect('**Demonstrativos de Resultado:**', 
                                           classes, 
                                           default=classes)
 
