@@ -164,6 +164,7 @@ with aba1:
                 st.write(f":blue[**Pergunta:**] {row['PERGUNTA']}")
                 st.write(f":green[**Resposta:**] {row['RESPOSTA']}")
                 st.caption(f"**Questionador:** :orange[**{row['QUESTIONADOR']}**]")
+                st.caption(f"**Nome:** :orange[**{row['NOME'].strip()}**]")
         else:
             st.write("Nenhuma informação disponível para esses filtros selecionados.")
 
@@ -306,21 +307,36 @@ with aba3:
 
 
         # link calameo
-        # link1 = """<div style="text-align:center;"><iframe src="//v.calameo.com/?bkcode=005631827143ab67d94d2&mode=mini" width="1620" height="680" frameborder="1" scrolling="yes" allowtransparency allowfullscreen style="margin:0 auto;"></iframe></div>"""
-                 
-        link1 = """<iframe src="https://publuu.com/flip-book/348588/798957/page/1?embed" width="100%" height="1620" scrolling="no" frameborder="0" allowfullscreen="" allow="clipboard-write" class="publuuflip"></iframe>"""
+            
+        link1 = """<div style="text-align:center;"><iframe src="//v.calameo.com/?bkcode=005631827143ab67d94d2&mode=mini" width="800" height="680" frameborder="1" scrolling="yes" allowtransparency allowfullscreen style="margin:0 auto;"></iframe></div>"""
 
-        link2 = """<iframe src="https://publuu.com/flip-book/348588/798987/page/1?embed" width="100%" height="1620" scrolling="no" frameborder="0" allowfullscreen="" allow="clipboard-write" class="publuuflip"></iframe>"""
+        link2 = """<div style="text-align:center;"><iframe src="//v.calameo.com/?bkcode=005631827c55f2773760e&mode=mini" width="800" height="680" frameborder="0" scrolling="no" allowtransparency allowfullscreen style="margin:0 auto;"></iframe></div>"""
 
-        link3 = """<iframe src="https://publuu.com/flip-book/348588/799002/page/1?embed" width="100%" height="1620" scrolling="no" frameborder="0" allowfullscreen="" allow="clipboard-write" class="publuuflip"></iframe>"""
+        link3 = """<div style="text-align:center;"><iframe src="//v.calameo.com/?bkcode=005631827d9b85f7e011a&mode=mini" width="800" height="680" frameborder="0" scrolling="no" allowtransparency allowfullscreen style="margin:0 auto;"></iframe></div>"""
         
-        link4 = """<iframe src="https://publuu.com/flip-book/348588/799004/page/1?embed" width="100%" height="1620" scrolling="no" frameborder="0" allowfullscreen="" allow="clipboard-write" class="publuuflip"></iframe>"""
+        link4 = """<div style="text-align:center;"><iframe src="//v.calameo.com/?bkcode=005631827571460f2d32b&mode=mini" width="800" height="680" frameborder="0" scrolling="no" allowtransparency allowfullscreen style="margin:0 auto;"></iframe></div>"""
         
-        link5 = """<iframe src="https://publuu.com/flip-book/348588/799005/page/1?embed" width="100%" height="1620" scrolling="no" frameborder="0" allowfullscreen="" allow="clipboard-write" class="publuuflip"></iframe>"""
+        link5 = """<div style="text-align:center;"><iframe src="//v.calameo.com/?bkcode=005631827f48f3117aad9&mode=mini" width="800" height="680" frameborder="0" scrolling="no" allowtransparency allowfullscreen style="margin:0 auto;"></iframe></div>"""
         
-        link6 = """<iframe src="https://publuu.com/flip-book/348588/799006/page/1?embed" width="100%" height="1620" scrolling="no" frameborder="0" allowfullscreen="" allow="clipboard-write" class="publuuflip"></iframe>"""
+        link6 = """<div style="text-align:center;"><iframe src="//v.calameo.com/?bkcode=0056318274e89fa6ab377&mode=mini" width="800" height="680" frameborder="0" scrolling="no" allowtransparency allowfullscreen style="margin:0 auto;"></iframe></div>"""
         
-        link7 = """<iframe src="https://publuu.com/flip-book/348588/799007/page/1?embed" width="100%" height="1620" scrolling="no" frameborder="0" allowfullscreen="" allow="clipboard-write" class="publuuflip"></iframe>"""
+        link7 = """<div style="text-align:center;"><iframe src="//v.calameo.com/?bkcode=005631827ded0c40c559b&mode=mini" width="800" height="680" frameborder="0" scrolling="no" allowtransparency allowfullscreen style="margin:0 auto;"></iframe></div>"""
+        
+        # links expirados    
+             
+        # link1 = """<iframe src="https://publuu.com/flip-book/348588/798957/page/1?embed" width="100%" height="1620" scrolling="no" frameborder="0" allowfullscreen="" allow="clipboard-write" class="publuuflip"></iframe>"""
+
+        # link2 = """<iframe src="https://publuu.com/flip-book/348588/798987/page/1?embed" width="100%" height="1620" scrolling="no" frameborder="0" allowfullscreen="" allow="clipboard-write" class="publuuflip"></iframe>"""
+
+        # link3 = """<iframe src="https://publuu.com/flip-book/348588/799002/page/1?embed" width="100%" height="1620" scrolling="no" frameborder="0" allowfullscreen="" allow="clipboard-write" class="publuuflip"></iframe>"""
+        
+        # link4 = """<iframe src="https://publuu.com/flip-book/348588/799004/page/1?embed" width="100%" height="1620" scrolling="no" frameborder="0" allowfullscreen="" allow="clipboard-write" class="publuuflip"></iframe>"""
+        
+        # link5 = """<iframe src="https://publuu.com/flip-book/348588/799005/page/1?embed" width="100%" height="1620" scrolling="no" frameborder="0" allowfullscreen="" allow="clipboard-write" class="publuuflip"></iframe>"""
+        
+        # link6 = """<iframe src="https://publuu.com/flip-book/348588/799006/page/1?embed" width="100%" height="1620" scrolling="no" frameborder="0" allowfullscreen="" allow="clipboard-write" class="publuuflip"></iframe>"""
+        
+        # link7 = """<iframe src="https://publuu.com/flip-book/348588/799007/page/1?embed" width="100%" height="1620" scrolling="no" frameborder="0" allowfullscreen="" allow="clipboard-write" class="publuuflip"></iframe>"""
         
 
         
